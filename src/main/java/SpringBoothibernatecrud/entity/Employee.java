@@ -44,24 +44,24 @@ public class Employee {
 		this.id=id;
 	}
 	
-	public int get_first_name() {
-		return this.id;
+	public String get_first_name() {
+		return this.first_name;
 	}
 	
 	public void set_first_name (String first_name) {
 		this.first_name=first_name;
 	}
 	
-	public int get_last_name() {
-		return this.id;
+	public String get_last_name() {
+		return this.last_name;
 	}
 	
 	public void set_last_name (String last_name) {
 		this.last_name=last_name;
 	}
 	
-	public int get_email() {
-		return this.id;
+	public String get_email() {
+		return this.email;
 	}
 	
 	public void set_email (String email) {
