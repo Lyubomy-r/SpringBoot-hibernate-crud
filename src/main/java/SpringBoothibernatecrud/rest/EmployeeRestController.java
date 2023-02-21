@@ -49,7 +49,7 @@ public class EmployeeRestController {
 	@PostMapping("/employees")
 	public Employee addEmployee(@RequestBody Employee thEmployee) {
 		
-		thEmployee.set_Id(0);
+		//thEmployee.set_Id(0);
 		
 		employeeService.save(thEmployee);
 		
