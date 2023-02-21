@@ -3,6 +3,7 @@ package SpringBoothibernatecrud.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,16 +15,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import SpringBoothibernatecrud.entity.Employee;
+import SpringBoothibernatecrud.service.EmployeeService;
 import SpringBoothibernatecrud.service.EmployeeServiceImpl;
 
 @RestController
 @RequestMapping("/api")
 public class EmployeeRestController {
 	
-	private EmployeeServiceImpl employeeService;
+	private EmployeeService employeeService;
 	
 	@Autowired
-	public EmployeeRestController(EmployeeServiceImpl employeeServiceImpl) {
+	public EmployeeRestController(@Qualifier("employeeServiceImplSpData")EmployeeService employeeServiceImpl) {
 		
 		this.employeeService=employeeServiceImpl;
 	}
